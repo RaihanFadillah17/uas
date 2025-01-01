@@ -1,0 +1,48 @@
+HTML
+
+<div class="container">
+  <main class="main-content">
+    <h1>Judul Konten Utama</h1>
+    <p>Ini adalah isi konten utama. Bisa berupa teks, gambar, atau elemen lainnya.</p>
+    </main>
+  <aside class="sidebar">
+    <h2>Sidebar</h2>
+    <ul>
+      <li><a href="#">Link 1</a></li>
+      <li><a href="#">Link 2</a></li>
+      <li><a href="#">Link 3</a></li>
+    </ul>
+  </aside>
+</div>
+.container {
+  display: flex; /* Mengaktifkan Flexbox */
+  flex-wrap: wrap; /* Agar responsif di mobile */
+}
+
+.main-content {
+  flex: 3; /* Lebar 3 bagian dari total fleksibel space */
+  padding: 20px;
+}
+
+.sidebar {
+  flex: 1; /* Lebar 1 bagian dari total fleksibel space */
+  padding: 20px;
+  background-color: #f0f0f0; /* Contoh warna latar belakang */
+}
+
+/* Media query untuk mobile */
+@media (max-width: 768px) {
+  .container {
+    flex-direction: column; /* Mengubah arah flex menjadi vertikal */
+  }
+  .main-content, .sidebar {
+    flex: 1; /* Mengisi lebar penuh */
+  }
+}
+
+kekurngan:
+display: flex; pada .container: Ini mengaktifkan Flexbox untuk elemen kontainer, menjadikan elemen di dalamnya sebagai flex items.
+Penggunaan elemen <div> tidak semantik: Elemen <div> digunakan untuk membungkus paragraf, tetapi tidak ada fungsi khusus dari elemen ini di sini.
+keuntungan: 
+Sederhana dan mudah dipahami: Sintaksnya relatif mudah dipelajari dan digunakan.
+Fleksibel: Memberikan kontrol yang baik terhadap tata letak dan penempatan elemen.
