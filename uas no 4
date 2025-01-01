@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ubah Warna Latar Belakang</title>
+</head>
+<body>
+  <button id="myButton">Ubah Latar Belakang</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+// Mendapatkan elemen tombol berdasarkan ID
+const button = document.getElementById('myButton');
+
+// Menambahkan event listener untuk event 'click'
+button.addEventListener('click', function() {
+  // Mengubah warna latar belakang body menjadi biru
+  document.body.style.backgroundColor = 'blue';
+
+  // Menampilkan pesan di konsol
+  console.log('Background berubah!');
+});
