@@ -1,0 +1,63 @@
+function cariAngkaTerbesar(arr) {
+  return Math.max(...arr);
+}
+
+const angka = [5, 10, 15, 20, 25];
+const angkaTerbesar = cariAngkaTerbesar(angka);
+console.log("Angka terbesar:", angkaTerbesar); // Output: Angka terbesar: 25
+function cariAngkaTerbesar(arr) {
+  if (arr.length === 0) {
+    return undefined; // Menangani kasus array kosong
+  }
+
+  let terbesar = arr[0]; // Inisialisasi dengan elemen pertama
+  for (let i = 1; i < arr.length; i++) {
+    if (arr[i] > terbesar) {
+      terbesar = arr[i];
+    }
+  }
+  return terbesar;
+}
+
+const angka = [5, 10, 15, 20, 25];
+const angkaTerbesar = cariAngkaTerbesar(angka);
+console.log("Angka terbesar:", angkaTerbesar); // Output: Angka terbesar: 25
+
+const angkaKosong = [];
+const angkaTerbesarKosong = cariAngkaTerbesar(angkaKosong);
+console.log("Angka terbesar dari array kosong:", angkaTerbesarKosong); // Output: Angka terbesar dari array kosong: undefined
+
+function cariAngkaTerbesar(arr) {
+  if (arr.length === 0) {
+    return undefined; // Menangani kasus array kosong
+  }
+  return arr.reduce((terbesar, angkaSaatIni) => {
+    return Math.max(terbesar, angkaSaatIni);
+  });
+
+  // Atau dengan penulisan yang lebih ringkas:
+  // return arr.reduce((terbesar, angkaSaatIni) => Math.max(terbesar, angkaSaatIni), -Infinity); // Jika array kosong, akan mengembalikan -Infinity
+}
+
+const angka = [5, 10, 15, 20, 25];
+const angkaTerbesar = cariAngkaTerbesar(angka);
+console.log("Angka terbesar:", angkaTerbesar); // Output: Angka terbesar: 25
+
+const angkaKosong = [];
+const angkaTerbesarKosong = cariAngkaTerbesar(angkaKosong);
+console.log("Angka terbesar dari array kosong:", angkaTerbesarKosong); // Output: Angka terbesar dari array kosong: undefined
+function cariAngkaTerbesar(arr) {
+    if (arr.length === 0) {
+        return undefined;
+    }
+    const sortedArr = [...arr].sort((a, b) => a - b); // Membuat salinan array dan mengurutkannya
+    return sortedArr[sortedArr.length - 1];
+}
+
+const angka = [5, 10, 15, 20, 25];
+const angkaTerbesar = cariAngkaTerbesar(angka);
+console.log("Angka terbesar:", angkaTerbesar); // Output: Angka terbesar: 25
+
+const angkaKosong = [];
+const angkaTerbesarKosong = cariAngkaTerbesar(angkaKosong);
+console.log("Angka terbesar dari array kosong:", angkaTerbesarKosong); // Output: Angka terbesar dari array kosong: undefined
