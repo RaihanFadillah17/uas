@@ -1,0 +1,26 @@
+// Mendapatkan elemen form, input email, dan elemen untuk pesan kesalahan
+const form = document.getElementById('myForm');
+const emailInput = document.getElementById('email');
+const emailError = document.getElementById('emailError');
+
+form.addEventListener('submit', function(event) {
+  // Mencegah form untuk disubmit secara default
+  event.preventDefault();
+
+ // Memeriksa apakah email valid
+  if (emailInput.value === '') {
+    emailError.textContent = 'Email harus diisi.';
+  } else if (!isValidEmail(emailInput.value)) {
+    emailError.textContent = 'Format email tidak valid.';
+  } else {
+ // Memeriksa apakah email error
+    emailError.textContent = ''; // Menghapus pesan error jika valid
+    alert('Email valid! Form dapat disubmit.'); // Atau submit form secara programatis: form.submit();
+  }
+});
+
+// memeriksa format email menggunakan regular expression
+function isValidEmail(email) {
+  const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  return emailRegex.test(email);
+}
