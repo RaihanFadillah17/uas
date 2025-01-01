@@ -1,0 +1,32 @@
+@media (max-width: 768px) {
+  .main-nav {
+    flex-direction: column; /* Mengubah arah flex menjadi vertikal */
+    align-items: flex-start; /* Mengatur perataan ke kiri */
+  }
+
+  .nav-list {
+    display: none; /* Menyembunyikan daftar menu awal */
+    flex-direction: column; /* Menampilkan list item secara vertikal */
+    width: 100%;
+    margin-top: 10px;
+  }
+
+  .nav-list.active {
+    display: flex; /* Menampilkan daftar menu saat class "active" ditambahkan */
+  }
+
+  .nav-list li {
+    margin: 0;
+    border-top: 1px solid #eee; /* Menambahkan garis pemisah */
+  }
+
+  .nav-list a {
+    display: block;
+    padding: 10px 20px;
+  }
+
+  .menu-toggle {
+    display: block; /* Menampilkan ikon hamburger */
+    align-self: flex-end; /* Memposisikan ikon di kanan */
+  }
+}
