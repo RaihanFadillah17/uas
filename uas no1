@@ -1,0 +1,49 @@
+kode awal:
+<html>
+<head>
+  <title>Website Saya</title>
+</head>
+<body>
+  <h1>Selamat datang!</h1>
+  <p>Ini adalah website pertama saya.</p>
+  <div>
+    <p>Konten lebih lanjut di sini.</p>
+  </div>
+  <footer>Hak Cipta 2024</footer>
+</body>
+</html>
+
+perbaikan:
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Website Saya</title>
+</head>
+<body>
+  <header>
+    <h1>Selamat datang!</h1>
+  </header>
+  <main>
+    <p>Ini adalah website pertama saya.</p>
+    <section>
+      <h2>Konten Tambahan</h2>
+      <p>Konten lebih lanjut di sini.</p>
+    </section>
+  </main>
+  <footer>
+    <p>&copy; Hak Cipta 2024</p>
+  </footer>
+</body>
+</html>
+
+kekurangan: 
+Tidak adanya elemen <header> atau struktur tambahan untuk informasi utama: Halaman hanya memiliki <h1> tanpa konteks dalam struktur header yang lebih baik.
+
+perbaikan:
+Tambahkan elemen <main>: Bungkus konten utama di dalam elemen <main> untuk meningkatkan struktur semantik.
+Tambahkan elemen <header>: Gunakan elemen <header> untuk membungkus <h1> dan mungkin menambahkan elemen navigasi jika diperlukan.
+
+
+
